@@ -1,0 +1,23 @@
+[project]
+name = "agentic-ai-agents-sdk"
+version = "0.1.0"
+description = "Runnable OpenAI Agents SDK examples: tools, memory, orchestration, multi-provider models, guardrails, deep research"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "openai-agents>=0.24.0",
+    "openai>=1.40.0",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]
+
+[tool.setuptools]
+packages = ["agentic_lab"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
